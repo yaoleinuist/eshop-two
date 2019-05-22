@@ -1,0 +1,8 @@
+/Users/yaolei/nonobank/eshop-two/eshop-datasync-service/src/main/java/com/roncoo/eshop/datasync/rabbitmq/HighPriorityDataChangeQueueReceiver.java
+/Users/yaolei/nonobank/eshop-two/eshop-datasync-service/src/main/java/com/roncoo/eshop/datasync/web/controller/DataSyncController.java
+/Users/yaolei/nonobank/eshop-two/eshop-datasync-service/src/main/java/com/roncoo/eshop/datasync/rabbitmq/RabbitMQSender.java
+/Users/yaolei/nonobank/eshop-two/eshop-datasync-service/src/main/java/com/roncoo/eshop/datasync/rabbitmq/DataChangeQueueReceiver.java
+/Users/yaolei/nonobank/eshop-two/eshop-datasync-service/src/main/java/com/roncoo/eshop/datasync/service/EshopProductService.java
+/Users/yaolei/nonobank/eshop-two/eshop-datasync-service/src/main/java/com/roncoo/eshop/datasync/rabbitmq/RefreshDataChangeQueueReceiver.java
+/Users/yaolei/nonobank/eshop-two/eshop-datasync-service/src/main/java/com/roncoo/eshop/datasync/service/fallback/EshopProductServiceFallback.java
+/Users/yaolei/nonobank/eshop-two/eshop-datasync-service/src/main/java/com/roncoo/eshop/datasync/EshopDataSyncServiceApplication.java

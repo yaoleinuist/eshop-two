@@ -1,0 +1,3 @@
+com/roncoo/eshop/datasync/rabbitmq/RefreshDataChangeQueueReceiver$1.class
+com/roncoo/eshop/datasync/rabbitmq/HighPriorityDataChangeQueueReceiver$1.class
+com/roncoo/eshop/datasync/rabbitmq/DataChangeQueueReceiver$1.class

@@ -1,0 +1,4 @@
+/Users/yaolei/nonobank/eshop-two/eshop-dataaggr-service/src/main/java/com/roncoo/eshop/dataaggr/rabbitmq/AggrDataChangeQueueReceiver.java
+/Users/yaolei/nonobank/eshop-two/eshop-dataaggr-service/src/main/java/com/roncoo/eshop/dataaggr/rabbitmq/HighPriorityAggrDataChangeQueueReceiver.java
+/Users/yaolei/nonobank/eshop-two/eshop-dataaggr-service/src/main/java/com/roncoo/eshop/dataaggr/EshopDataAggrServiceApplication.java
+/Users/yaolei/nonobank/eshop-two/eshop-dataaggr-service/src/main/java/com/roncoo/eshop/dataaggr/rabbitmq/RefreshAggrDataChangeQueueReceiver.java

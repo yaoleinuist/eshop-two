@@ -21,6 +21,7 @@ import com.roncoo.eshop.datasync.service.EshopProductService;
  * （1）然后通过spring cloud fegion调用eshop-product-service服务的各种接口， 获取数据
  * （2）将原子数据在redis中进行增删改
  * （3）将维度数据变化消息写入rabbitmq中另外一个queue，供数据聚合服务来消费
+ *   刷数据队列和高优先级队列很重要，不然在有些场景很难满足业务需求
  * 
  * @author Administrator
  *
@@ -36,6 +37,7 @@ public class HighPriorityDataChangeQueueReceiver {
 	@Autowired
 	private RabbitMQSender rabbitMQSender;
 	
+	//主要作用是去重,变更的数据
 	private Set<String> dimDataChangeMessageSet = 
 			Collections.synchronizedSet(new HashSet<String>()); 
 	

@@ -18,8 +18,9 @@ public class UserController {
 	
 	@RequestMapping("/findAllUsers")
 	@ResponseBody
-	public List<User> findAllUsers() {
-		return userService.findAllUsers();
+	public User findAllUsers() {
+		return new User();
+	//	return userService.findAllUsers();
 	}
 	
 }

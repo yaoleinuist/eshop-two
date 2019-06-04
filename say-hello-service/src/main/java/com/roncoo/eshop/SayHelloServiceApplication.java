@@ -1,5 +1,7 @@
 package com.roncoo.eshop;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +22,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @EnableCircuitBreaker
 public class SayHelloServiceApplication {
 
+	Logger logger = LoggerFactory.getLogger(SayHelloServiceApplication.class);
+	
 	public static void main(String[] args) {
 		SpringApplication.run(SayHelloServiceApplication.class, args); 
 	}
@@ -34,7 +38,8 @@ public class SayHelloServiceApplication {
 	}
 	
 	public String sayHelloFallback(String name) {
-		return "error, " + name;
+		logger.info("#SayHelloServiceApplication--name={}",name);
+		return "error2, " + name;
 	}
 	
 }

@@ -83,7 +83,7 @@ public class AggrDataChangeQueueReceiver {
     		jedis.del("dim_product_intro_" + id);
     	}
     }
-    
+    //产品信息包含很多维度，这里只是将product_property和product_specification从redis取出来，然后重新聚合成一个大的json
     private void processProductDimDataChange(JSONObject messageJSONObject) {
     	Long id = messageJSONObject.getLong("id");  
     	
@@ -98,7 +98,8 @@ public class AggrDataChangeQueueReceiver {
     		if(productPropertyDataJSON != null && !"".equals(productPropertyDataJSON)) {
     			productDataJSONObject.put("product_property", JSONObject.parse(productPropertyDataJSON));
     		} 
-    		
+    		//如果productSpecificationDataJSON是空的话，那么有两种情况1是productSpecificationDataJSON被删了，或者是
+    		//productSpecificationDataJSON没有被更新。
     		String productSpecificationDataJSON = jedis.get("product_specification_" + id);
     		if(productSpecificationDataJSON != null && !"".equals(productSpecificationDataJSON)) {
     			productDataJSONObject.put("product_specification", JSONObject.parse(productSpecificationDataJSON));

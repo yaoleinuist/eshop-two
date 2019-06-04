@@ -14,4 +14,4 @@ zuul:
       serviceId: say-hello-service
     greeting-service:
       path: /greeting-service/**
-      serviceId: greeting-service
+      serviceId: config-client

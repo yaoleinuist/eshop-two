@@ -75,6 +75,8 @@ public class DataChangeQueueReceiver {
     	String eventType = messageJSONObject.getString("event_type"); 
     	
     	if("add".equals(eventType) || "update".equals(eventType)) { 
+    		//数据优化，只有大于两个数据变化，再去基础服务获取变化的数据。
+    		
     		brandDataChangeMessageList.add(messageJSONObject);
     		
     		if(brandDataChangeMessageList.size() >= 2) {
@@ -191,6 +193,7 @@ public class DataChangeQueueReceiver {
     	  
     	dimDataChangeMessageSet.add("{\"dim_type\": \"product\", \"id\": " + productId + "}");
     }
+    //异步的发送数据到mq中，每隔5分钟或者1分钟进行发送。
     
     private class SendThread extends Thread {
     	

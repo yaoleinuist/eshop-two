@@ -1,6 +1,6 @@
 local uri_args = ngx.req.get_uri_args()
 local productId = uri_args["productId"]
-
+--根据productId进行hash，访问app-nginx
 local hosts = {"192.168.31.223:8000", "192.168.31.253:8000"}
 local hash = ngx.crc32_long(productId)
 local index = (hash % 2) + 1
